@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.17239583333333333" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.18" />
+        <entry key="app/src/main/res/drawable/bg_indicator.xml" value="0.18" />
+        <entry key="app/src/main/res/drawable/custom_bg_banner.xml" value="0.1555" />
+        <entry key="app/src/main/res/drawable/custom_bg_image_banner.xml" value="0.18" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.111" />
+        <entry key="app/src/main/res/layout/activity_list_song.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_list_song_in_playlist.xml" value="0.31146609541298687" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_play_song.xml" value="0.3984778141629869" />
+        <entry key="app/src/main/res/layout/banner_item.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/layout_fragment_banner.xml" value="0.1515082096707994" />
+        <entry key="app/src/main/res/layout/layout_fragment_home.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/layout_fragment_mucluc.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/layout_fragment_nghe_si.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/layout_fragment_play_song.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/layout_fragment_playlist.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/layout_fragment_search.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/layout_fragment_xone.xml" value="0.14361702127659576" />
+        <entry key="app/src/main/res/layout/layout_fragment_zing_chart.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/layout_play_song.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/muc_luc_item.xml" value="0.40111694335937503" />
+        <entry key="app/src/main/res/layout/play_list_item.xml" value="0.37225850423177087" />
+        <entry key="app/src/main/res/layout/play_list_song_item.xml" value="0.146875" />
+        <entry key="app/src/main/res/layout/xone_item.xml" value="0.3038626408231432" />
+        <entry key="app/src/main/res/layout/zing_chart_item.xml" value="0.3279486393582994" />
+        <entry key="app/src/main/res/menu/menu_bottom_nav.xml" value="0.2953125" />
+        <entry key="app/src/main/res/menu/menu_bottom_navigation.xml" value="0.2953125" />
+        <entry key="app/src/main/res/xml/network_security_config.xml" value="0.19610507246376813" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
