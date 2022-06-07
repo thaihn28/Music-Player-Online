@@ -52,7 +52,7 @@ public class PlaySong extends AppCompatActivity implements View.OnClickListener 
         tvArtistOfSong.setText(zingChart.getZcArtist());
 //        Picasso.get().load(zingChart.getZcThumb()).into(ivSongThumb);
 
-//        btnPlay.setOnClickListener(this::onClick);
+          btnPlaySong.setOnClickListener(this::onClick);
 //        btnPause.setOnClickListener(this::onClick);
 //        btnResume.setOnClickListener(this::onClick);
           btnBackToHome.setOnClickListener(this::onClick);
@@ -123,9 +123,10 @@ public class PlaySong extends AppCompatActivity implements View.OnClickListener 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-//            case R.id.btnPlaySong:
-//                getSong();
-//                break;
+            case R.id.btnPlay:
+                getSong();
+
+                break;
 //            case R.id.btnPause:
 //                if(mediaPlayer.isPlaying()){
 //                    mediaPlayer.pause();

@@ -50,23 +50,7 @@ public class BannerFragment extends Fragment {
         banners = new ArrayList<>();
         bannerAdapter = new BannerAdapter(getActivity());
         loadBanner();
-
-        handler = new Handler();
-        runnable = new Runnable() {
-            @Override
-            public void run() {
-                currentItem = viewPagerBanner.getCurrentItem();
-                currentItem++;
-                if(currentItem >= viewPagerBanner.getAdapter().getItemCount()){
-                    currentItem = 0;
-                }
-                viewPagerBanner.setCurrentItem(currentItem, true);
-                handler.postDelayed(runnable, 4500);
-            }
-        };
-        handler.postDelayed(runnable, 4500);
-
-
+        sliderBanner();
         return view;
     }
     private void initUI() {
@@ -110,5 +94,24 @@ public class BannerFragment extends Fragment {
         bannerAdapter.setData(banners);
         viewPagerBanner.setAdapter(bannerAdapter);
         circleIndicator.setViewPager(viewPagerBanner);
+    }
+
+    public void sliderBanner(){
+            handler = new Handler();
+            runnable = new Runnable() {
+            @Override
+            public void run() {
+                currentItem = viewPagerBanner.getCurrentItem();
+                if(currentItem >= 0){
+                    currentItem++;
+                    if(currentItem >= viewPagerBanner.getAdapter().getItemCount()){
+                        currentItem = 0;
+                    }
+                    viewPagerBanner.setCurrentItem(currentItem, true);
+                    handler.postDelayed(runnable, 5000);
+                }
+                }
+            };
+            handler.postDelayed(runnable, 10000);
     }
 }

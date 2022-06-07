@@ -101,8 +101,8 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/icon_btn_shuffle"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
+                android:layout_marginLeft="28dp"
+                android:layout_marginRight="35dp"
                 />
             <ImageView
                 android:id="@+id/btnPrevious"
@@ -111,23 +111,45 @@
                 android:layout_height="40dp"
                 android:src="@drawable/icon_btn_next"
                 android:scaleX="-1"
-                android:layout_marginRight="30dp"
+                android:layout_marginRight="35dp"
                 />
-            <ImageView
-                android:id="@+id/btnPlay"
-                android:scaleType="fitXY"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/icon_btn_play"
-                android:layout_marginRight="30dp"
-                />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="35dp"
+                >
+                <ImageView
+                    android:id="@+id/btnPlay"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="fitXY"
+                    android:visibility="visible"
+                    android:src="@drawable/icon_btn_play"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <ImageView
+                    android:id="@+id/btnPause"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_btn_pause"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
             <ImageView
                 android:id="@+id/btnNext"
                 android:scaleType="fitXY"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/icon_btn_next"
-                android:layout_marginRight="30dp"
                 />
             <ImageView
                 android:id="@+id/btnRepeat"
@@ -135,6 +157,8 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/icon_btn_repeat"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
                 />
         </LinearLayout>
     </LinearLayout>
