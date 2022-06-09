@@ -6,12 +6,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.PlaySong">
+    tools:context=".Activity.PlaySong">
 
     <LinearLayout
         android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp">
         <ImageView
             android:id="@+id/btnBackToHome"
             android:layout_marginLeft="20dp"
@@ -49,6 +49,7 @@
 
     </LinearLayout>
     <androidx.viewpager.widget.ViewPager
+        android:layout_marginTop="10dp"
         android:id="@+id/viewPagerPlaySong"
         android:layout_weight="8"
         android:layout_width="match_parent"

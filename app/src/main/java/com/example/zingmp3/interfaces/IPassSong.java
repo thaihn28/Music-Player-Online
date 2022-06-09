@@ -1,7 +1,7 @@
 package com.example.zingmp3.interfaces;
 
-import com.example.zingmp3.model.ZingChart;
+import com.example.zingmp3.Model.SongInPlaylist;
 
 public interface IPassSong {
-    void onDataPass(ZingChart zingChart);
+    void onDataPass(SongInPlaylist song);
 }

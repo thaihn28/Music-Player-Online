@@ -19,12 +19,12 @@
             >
             <fragment
                 android:id="@+id/fragment_banner"
-                android:name="com.example.zingmp3.fragment.BannerFragment"
+                android:name="com.example.zingmp3.Fragment.BannerFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <fragment
                 android:id="@+id/fragment_muc_luc"
-                android:name="com.example.zingmp3.fragment.MucLucFragment"
+                android:name="com.example.zingmp3.Fragment.MucLucFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
@@ -39,7 +39,7 @@
 
             <fragment
                 android:id="@+id/fragment_playlist"
-                android:name="com.example.zingmp3.fragment.PlaylistFragment"
+                android:name="com.example.zingmp3.Fragment.PlaylistFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <TextView
@@ -52,7 +52,7 @@
                 android:textStyle="bold"/>
             <fragment
                 android:id="@+id/fragment_zone"
-                android:name="com.example.zingmp3.fragment.XoneFragment"
+                android:name="com.example.zingmp3.Fragment.XoneFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <TextView
@@ -65,7 +65,7 @@
                 android:textStyle="bold"/>
             <fragment
                 android:id="@+id/fragment_zing_chart"
-                android:name="com.example.zingmp3.fragment.ZingChartFragment"
+                android:name="com.example.zingmp3.Fragment.ZingChartFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         </LinearLayout>

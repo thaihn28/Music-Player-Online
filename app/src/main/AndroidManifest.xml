@@ -13,14 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ZingMP3">
         <activity
-            android:name=".activity.PlaySong"
+            android:name=".Activity.PlaySong"
             android:exported="false" >
         </activity>
         <activity
-            android:name=".activity.ListSongInPlaylist"
+            android:name=".Activity.ListSongInPlaylist"
             android:exported="false" />
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".Activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

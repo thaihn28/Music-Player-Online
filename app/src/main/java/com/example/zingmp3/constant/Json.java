@@ -8,7 +8,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.zingmp3.fragment.XoneFragment;
 import com.example.zingmp3.interfaces.ICallBackJsonArray;
 
 import org.json.JSONArray;
