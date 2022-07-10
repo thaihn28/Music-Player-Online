@@ -21,8 +21,10 @@ import com.example.zingmp3.Model.SongInPlaylist;
 import com.example.zingmp3.R;
 import com.example.zingmp3.APIService.ApiService;
 import com.example.zingmp3.Model.Song;
+import com.example.zingmp3.interfaces.IPassSong;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 import retrofit2.Call;
@@ -38,6 +40,8 @@ public class PlaySong extends AppCompatActivity implements View.OnClickListener 
     private MediaPlayer mediaPlayer;
     public static ArrayList<SongInPlaylist> listSongFromZingChart;
     public static PlaySongViewPagerAdapter playSongViewPagerAdapter;
+    private IPassSong iPassSong;
+    private Song passSong;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,8 +51,6 @@ public class PlaySong extends AppCompatActivity implements View.OnClickListener 
         initUI();
         getDataFromIntent();
 
-        tvSongName.setText(song.getTitle());
-        tvArtistOfSong.setText(song.getArtistsNames());
 //        Picasso.get().load(zingChart.getZcThumb()).into(ivSongThumb);
         btnPlaySong.setOnClickListener(this::onClick);
 //        btnPause.setOnClickListener(this::onClick);
@@ -60,7 +62,6 @@ public class PlaySong extends AppCompatActivity implements View.OnClickListener 
         Intent intent = getIntent();
         if (listSongFromZingChart != null) {
             listSongFromZingChart.clear();
-
         }
         if (intent == null) {
             Toast.makeText(this, "Get intent data failed", Toast.LENGTH_SHORT).show();
@@ -75,6 +76,8 @@ public class PlaySong extends AppCompatActivity implements View.OnClickListener 
                 Log.i("test", s.getTitle());
             }
         }
+        tvSongName.setText(song.getTitle());
+        tvArtistOfSong.setText(song.getArtistsNames());
     }
 
     private void initUI() {
@@ -105,28 +108,34 @@ public class PlaySong extends AppCompatActivity implements View.OnClickListener 
             public void onResponse(Call<Song> call, Response<Song> response) {
                 Song song = response.body();
                 if (response.isSuccessful() && song != null) {
+//                    passSong = song;
                     playAudio(song.getData().get128());
                 }
             }
-
             @Override
             public void onFailure(Call<Song> call, Throwable t) {
                 Toast.makeText(PlaySong.this, "Load failed", Toast.LENGTH_SHORT).show();
             }
         });
     }
-
-    public void playAudio(String url) {
+    public void playAudio(String songURL) {
         mediaPlayer = new MediaPlayer();
         mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
         try {
-            mediaPlayer.setDataSource(url);
+            mediaPlayer.setDataSource(songURL);
             mediaPlayer.prepare();
-            mediaPlayer.start();
+            setTimeSong();
+//            mediaPlayer.prepare();
+//            mediaPlayer.start();
         } catch (IOException e) {
             e.printStackTrace();
         }
         Toast.makeText(PlaySong.this, "Audio started playing..", Toast.LENGTH_SHORT).show();
+
+    }
+    private void setTimeSong(){
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("mm:ss");
+        tvTotalTimeSong.setText(simpleDateFormat.format(mediaPlayer.getDuration()));
     }
 
     @Override
